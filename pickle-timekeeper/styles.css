@@ -1,0 +1,86 @@
+:root {
+    --pickle-green: #4CAF50;
+    --pickle-dark: #45a049;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Cabin Sketch', cursive;
+    color: var(--pickle-green);
+    text-align: center;
+}
+
+#timer {
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 0;
+}
+
+button, select {
+    background-color: var(--pickle-green);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, select:hover {
+    background-color: var(--pickle-dark);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--pickle-green);
+}
+
+#notes-display {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--pickle-green);
+    padding: 10px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+#speed-selector {
+    margin: 10px 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 25px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px top 50%;
+}
+
+#shortcuts-dialog {
+    padding: 20px;
+}
+
+#shortcuts-dialog table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#shortcuts-dialog th, #shortcuts-dialog td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#shortcuts-dialog th {
+    background-color: var(--pickle-green);
+    color: white;
+}
