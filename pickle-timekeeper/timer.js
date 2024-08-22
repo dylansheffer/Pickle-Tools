@@ -27,14 +27,21 @@ function formatTime(totalSeconds) {
 }
 
 function updateTimer() {
-    seconds += speed;
+    if (isRunning) {
+        seconds += speed;
+        renderTime();
+        saveTimerState();
+    }
+}
+
+function renderTime() {
     const formattedTime = formatTime(Math.floor(seconds));
     timerDisplay.textContent = formattedTime;
     document.title = `${formattedTime} - Pickle Timekeeper`;
-    saveTimerState();
 }
 
 function saveTimerState() {
+    // console.log('Saving state:', { seconds, isRunning });
     localStorage.setItem('timerSeconds', seconds);
     localStorage.setItem('timerLastUpdated', Date.now());
     localStorage.setItem('timerIsRunning', isRunning);
@@ -45,17 +52,19 @@ function loadTimerState() {
     const lastUpdated = localStorage.getItem('timerLastUpdated');
     const savedIsRunning = localStorage.getItem('timerIsRunning');
 
+    // console.log('Loading state:', { savedSeconds, lastUpdated, savedIsRunning });
+
     if (savedSeconds && lastUpdated && savedIsRunning) {
         seconds = parseFloat(savedSeconds);
         isRunning = savedIsRunning === 'true';
 
         if (isRunning) {
             const elapsedSeconds = (Date.now() - parseInt(lastUpdated)) / 1000;
-            seconds += elapsedSeconds;
+            seconds += elapsedSeconds * speed;
             startTimer();
         }
 
-        updateTimer();
+        renderTime();
         startStopBtn.textContent = isRunning ? 'Stop' : 'Start';
     }
 }
@@ -79,10 +88,10 @@ function toggleTimer() {
 
 function resetTimer() {
     clearInterval(timer);
-    seconds = 0;
-    updateTimer();
-    startStopBtn.textContent = 'Start';
+    seconds = 0; // Reset seconds to 0
     isRunning = false;
+    renderTime();
+    startStopBtn.textContent = 'Start';
     saveTimerState();
 }
 
@@ -96,3 +105,6 @@ function toggleTimeSpeed() {
         startTimer();
     }
 }
+
+// Initialize the timer state on page load
+loadTimerState();
