@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build:all"
+  publish = "dist"
+
+[context.production]
+  command = "npm run build:all"
+
+[context.deploy-preview]
+  command = "npm run build:all"
+
+[context.branch-deploy]
+  command = "npm run build:all"

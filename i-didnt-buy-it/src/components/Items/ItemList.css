@@ -1,0 +1,17 @@
+.item-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .item-grid {
+    display: none;
+  }
+}

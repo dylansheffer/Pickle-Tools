@@ -1,0 +1,16 @@
+{
+  "name": "pickle-tools",
+  "version": "1.0.0",
+  "description": "> Minimal effort, maximum impact. Pickle your productivity! 🚀",
+  "main": "index.js",
+  "scripts": {
+    "build:all": "npm run build:i-didnt-buy-it",
+    "build:i-didnt-buy-it": "cd i-didnt-buy-it && npm install && npm run build && cd .."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.2"
+  }
+}

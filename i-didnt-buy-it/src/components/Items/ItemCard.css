@@ -1,0 +1,50 @@
+.item-card {
+  background-color: #28a745;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 1 / 1;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.item-card:hover {
+  transform: scale(1.05);
+}
+
+.item-card h3 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.item-card .price {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.item-card .date,
+.item-card .adder {
+  font-size: 0.8em;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}

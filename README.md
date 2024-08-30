@@ -30,6 +30,7 @@ Pickle Tools is a spicy collection of bite-sized, high-impact projects that'll m
 ## 🥒 Our Pickles (Tools)
 
 - [Pickle Timekeeper](./pickle-timekeeper.html) - Preserve your thoughts with timestamps, like pickling moments in brine! 🥒⏱️
+- [I Didn't Buy It](./i-didnt-buy-it) - Ferment your savings and watch your pickle jar grow! 💰🥒
 
 ## 🤝 Contributing
 

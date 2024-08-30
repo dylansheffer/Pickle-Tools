@@ -1,0 +1,31 @@
+.app-header {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
+.app-header nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.app-header nav ul li {
+  margin: 0 10px;
+}
+
+.app-header nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.app-header nav ul li button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}

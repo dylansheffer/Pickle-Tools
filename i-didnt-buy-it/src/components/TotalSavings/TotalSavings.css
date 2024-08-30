@@ -1,0 +1,21 @@
+.total-savings {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.total-savings h2 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.5em;
+}
+
+.savings-amount {
+  font-size: 3em;
+  font-weight: bold;
+  color: #28a745;
+  margin: 0;
+}
